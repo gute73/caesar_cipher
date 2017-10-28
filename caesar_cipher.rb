@@ -10,7 +10,7 @@ def caesar_cipher(message, shift_factor)
 
 	cipher = ""
 
-  message.each_char do |character|
+  message.scan(/./) do |character|
   	char_ascii = character.ord
   	if (char_ascii >= 48 && char_ascii <= 57)
   		cipher += shift(char_ascii, shift_factor, 48, 57)
