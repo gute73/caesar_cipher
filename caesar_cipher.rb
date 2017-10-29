@@ -8,22 +8,22 @@ end
 
 def caesar_cipher(message, shift_factor)
 
-	cipher = ""
+	new_message = ""
 
   message.scan(/./) do |character|
   	char_ascii = character.ord
   	if (char_ascii >= 48 && char_ascii <= 57)
-  		cipher += shift(char_ascii, shift_factor, 48, 57)
+  		new_message += shift(char_ascii, shift_factor, 48, 57)
   	elsif (char_ascii >= 65 && char_ascii <= 90)
-  		cipher += shift(char_ascii, shift_factor, 65, 90)
+  		new_message += shift(char_ascii, shift_factor, 65, 90)
   	elsif (char_ascii >= 97 && char_ascii <= 122)
-  		cipher += shift(char_ascii, shift_factor, 97, 122)
+  		new_message += shift(char_ascii, shift_factor, 97, 122)
   	else
-  		cipher += char_ascii.chr
+  		new_message += char_ascii.chr
   	end
   end
 
-  cipher
+  new_message
 end
 
 
